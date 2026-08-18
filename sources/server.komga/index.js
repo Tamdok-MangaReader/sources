@@ -612,6 +612,8 @@ const source = {
     return pages.map((page) => ({
       url: pageImageUrl(ctx, chapter.key, page.number),
       thumbnail: `${getServerUrl(ctx)}/api/v1/books/${chapter.key}/pages/${page.number}/thumbnail`,
+      ...(Number(page.width) > 0 ? { width: Number(page.width) } : {}),
+      ...(Number(page.height) > 0 ? { height: Number(page.height) } : {}),
     }));
   },
 };
