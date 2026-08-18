@@ -25,10 +25,23 @@ if (existsSync(staticDir)) {
   }
 }
 
+const registryConfigPath = join(staticDir, 'registry.json');
+const registryConfig = existsSync(registryConfigPath)
+  ? JSON.parse(readFileSync(registryConfigPath, 'utf8'))
+  : {};
+
 const registry = {
-  name: 'Tamdok Community Sources',
+  name: registryConfig.name ?? 'Tamdok Sources',
   sources: [],
 };
+
+const registryIconFile = registryConfig.icon ?? 'registry-icon.png';
+const registryIconPath = join(staticDir, registryIconFile);
+if (existsSync(registryIconPath)) {
+  const iconBytes = readFileSync(registryIconPath);
+  writeFileSync(join(outIconsDir, 'registry.png'), iconBytes);
+  registry.iconURL = 'icons/registry.png';
+}
 
 for (const folder of readdirSync(sourcesDir, { withFileTypes: true }).filter((entry) => entry.isDirectory())) {
   if (folder.name === 'template') continue;
