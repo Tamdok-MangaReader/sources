@@ -1,0 +1,95 @@
+name: Source bug
+description: A bundled source in this registry is broken
+title: "[Source]: "
+labels: ["source", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for sources shipped in **tamdok-sources** (e.g. Komga).
+        For community sources, open an issue in [sources-community](https://github.com/Tamdok-MangaReader/sources-community).
+
+  - type: input
+    id: source-id
+    attributes:
+      label: Source ID
+      placeholder: server.komga
+    validations:
+      required: true
+
+  - type: dropdown
+    id: broken-part
+    attributes:
+      label: What is broken?
+      multiple: true
+      options:
+        - Home
+        - Search / filters
+        - Manga details
+        - Chapter list
+        - Reader / pages
+        - Settings (URL, auth, etc.)
+        - Registry / build
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Install source from registry ...
+        2. Open ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Tamdok app version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS
+        - Android
+        - Web
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, URLs, or screenshots
+      description: Manga/chapter URL, error message, or Metro logs if available.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for this source
+          required: true
+        - label: I tested on the latest Tamdok build
+          required: true

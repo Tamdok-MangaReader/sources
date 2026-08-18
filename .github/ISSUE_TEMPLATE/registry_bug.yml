@@ -1,0 +1,29 @@
+name: Registry / build bug
+description: Problem with index.min.json, GitHub Pages, or build scripts
+title: "[Registry]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What went wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+
+  - type: input
+    id: registry-url
+    attributes:
+      label: Registry URL (if applicable)
+      placeholder: https://tamdok-mangareader.github.io/sources/index.min.json
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Build output, Actions log, or screenshots

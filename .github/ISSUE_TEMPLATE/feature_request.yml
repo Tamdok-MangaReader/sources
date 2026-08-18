@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest a new bundled source or registry improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      placeholder: Why add this source or change the registry?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: input
+    id: site
+    attributes:
+      label: Site or service (if new source)
+      placeholder: https://example.com
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - New bundled source
+        - Existing source improvement
+        - Registry / build
+        - Documentation
+        - Other
+    validations:
+      required: true
