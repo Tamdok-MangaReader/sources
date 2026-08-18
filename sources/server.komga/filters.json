@@ -1,0 +1,54 @@
+[
+  {
+    "type": "sort",
+    "id": "sort",
+    "title": "Sort",
+    "options": ["Recently Updated", "Recently Added", "Name A-Z", "Name Z-A"],
+    "default": { "index": 0, "ascending": false }
+  },
+  {
+    "type": "multi-select",
+    "id": "status",
+    "title": "Status",
+    "options": ["Ongoing", "Ended", "Hiatus", "Abandoned"],
+    "ids": ["ONGOING", "ENDED", "HIATUS", "ABANDONED"]
+  },
+  {
+    "type": "select",
+    "id": "complete",
+    "title": "Completion",
+    "options": ["Any", "Complete", "Incomplete"],
+    "ids": ["", "true", "false"]
+  },
+  {
+    "type": "check",
+    "id": "oneshot",
+    "title": "One-shots only",
+    "default": false
+  },
+  {
+    "type": "text",
+    "id": "genre",
+    "title": "Genre"
+  },
+  {
+    "type": "text",
+    "id": "tag",
+    "title": "Tag"
+  },
+  {
+    "type": "text",
+    "id": "author",
+    "title": "Author"
+  },
+  {
+    "type": "text",
+    "id": "publisher",
+    "title": "Publisher"
+  },
+  {
+    "type": "text",
+    "id": "language",
+    "title": "Language"
+  }
+]

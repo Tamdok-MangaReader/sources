@@ -1,0 +1,11 @@
+{
+  "name": "tamdok-sources",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "fflate": "^0.8.3"
+  }
+}

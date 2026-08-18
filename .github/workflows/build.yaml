@@ -1,0 +1,36 @@
+name: Build Tamdok sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sources/**'
+      - 'scripts/**'
+      - 'static/**'
+      - '.github/workflows/build.yaml'
+
+# Required: default GITHUB_TOKEN is read-only without this block.
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+      - run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          branch: gh-pages
+          folder: public
+          single-commit: true
