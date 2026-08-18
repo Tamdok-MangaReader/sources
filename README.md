@@ -34,15 +34,3 @@ tamdok://settings/sources?registry=https%3A%2F%2Ftamdok-mangareader.github.io%2F
 
 
 Or import a `.tamdok` file from Settings → Sources.
-
-## Registry metadata
-
-Display name and icon for the registry catalog are configured in `static/registry.json`:
-
-```json
-{
-  "name": "Tamdok Sources"
-}
-```
-
-Optional icon: add `static/registry-icon.png`. The build script writes both to `index.min.json` as `name` and `iconURL`.

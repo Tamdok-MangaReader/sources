@@ -2,7 +2,7 @@
   "info": {
     "id": "server.komga.tamdok",
     "name": "Komga",
-    "version": 1,
+    "version": 2,
     "url": "https://komga.org",
     "contentRating": 0,
     "languages": ["multi"],
@@ -16,63 +16,81 @@
   ],
   "settings": [
     {
-      "type": "text",
-      "id": "serverUrl",
-      "title": "Server URL",
-      "default": "http://localhost:25600"
+      "type": "group",
+      "title": "URL",
+      "items": [
+        {
+          "type": "text",
+          "id": "serverUrl",
+          "title": "Server URL",
+          "default": "http://localhost:25600"
+        }
+      ]
     },
     {
-      "type": "text",
-      "id": "apiKey",
-      "title": "API key",
-      "default": ""
+      "type": "group",
+      "title": "AUTH",
+      "items": [
+        {
+          "type": "text",
+          "id": "apiKey",
+          "title": "API key",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "username",
+          "title": "Username",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "password",
+          "title": "Password",
+          "default": ""
+        }
+      ]
     },
     {
-      "type": "text",
-      "id": "username",
-      "title": "Username)",
-      "default": ""
-    },
-    {
-      "type": "text",
-      "id": "password",
-      "title": "Password",
-      "default": ""
-    },
-    {
-      "type": "text",
-      "id": "defaultLibraryId",
-      "title": "Default library ID (optional)",
-      "default": ""
-    },
-    {
-      "type": "select",
-      "id": "pageFormat",
-      "title": "Page image format",
-      "options": [
-        { "id": "jpeg", "label": "JPEG (recommended)" },
-        { "id": "png", "label": "PNG" },
-        { "id": "original", "label": "Original" }
-      ],
-      "default": "jpeg"
-    },
-    {
-      "type": "switch",
-      "id": "includeOneshots",
-      "title": "Include one-shots",
-      "default": true
-    },
-    {
-      "type": "switch",
-      "id": "showReadBooks",
-      "title": "Show read chapters",
-      "default": true
-    },
-    {
-      "type": "link",
-      "id": "docs",
-      "title": "Komga documentation",
-      "url": "https://komga.org/docs"
+      "type": "group",
+      "title": "OTHER",
+      "items": [
+        {
+          "type": "text",
+          "id": "defaultLibraryId",
+          "title": "Default library ID (optional)",
+          "default": ""
+        },
+        {
+          "type": "select",
+          "id": "pageFormat",
+          "title": "Page image format",
+          "options": [
+            { "id": "jpeg", "label": "JPEG (recommended)" },
+            { "id": "png", "label": "PNG" },
+            { "id": "original", "label": "Original" }
+          ],
+          "default": "jpeg"
+        },
+        {
+          "type": "switch",
+          "id": "includeOneshots",
+          "title": "Include one-shots",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "showReadBooks",
+          "title": "Show read chapters",
+          "default": true
+        },
+        {
+          "type": "link",
+          "id": "docs",
+          "title": "Komga documentation",
+          "url": "https://komga.org/docs"
+        }
+      ]
     }
   ]
 }
