@@ -1,0 +1,75 @@
+{
+  "info": {
+    "id": "server.suwayomi.tamdok",
+    "name": "Suwayomi",
+    "version": 1,
+    "url": "https://github.com/Suwayomi/Suwayomi-Server",
+    "contentRating": 0,
+    "languages": [
+      "multi"
+    ],
+    "minAppVersion": "0.1.0"
+  },
+  "listings": [
+    {
+      "id": "library",
+      "name": "Library",
+      "kind": "grid"
+    },
+    {
+      "id": "recent",
+      "name": "Recently Added",
+      "kind": "grid"
+    },
+    {
+      "id": "updated",
+      "name": "Recently Updated",
+      "kind": "grid"
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "title": "URL",
+      "items": [
+        {
+          "type": "text",
+          "id": "serverUrl",
+          "title": "Server URL",
+          "default": "http://localhost:4567"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "AUTH (Basic)",
+      "items": [
+        {
+          "type": "text",
+          "id": "username",
+          "title": "Username",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "password",
+          "title": "Password",
+          "default": "",
+          "secure": true
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "OTHER",
+      "items": [
+        {
+          "type": "link",
+          "id": "docs",
+          "title": "Suwayomi on GitHub",
+          "url": "https://github.com/Suwayomi/Suwayomi-Server"
+        }
+      ]
+    }
+  ]
+}

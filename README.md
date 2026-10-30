@@ -8,6 +8,8 @@ Tamdok also supports Aidoku `.aix` (Rust/WASM) sources from the Aidoku registry.
 
 Community sources can be found [here](https://github.com/Tamdok-MangaReader/sources-community)
 
+Browse every official and community source on one page: [tamdok-mangareader.github.io/sources-community](https://tamdok-mangareader.github.io/sources-community/)
+
 ## Add sources in Tamdok
 
 <p align="center">

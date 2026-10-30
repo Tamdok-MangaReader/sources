@@ -1,0 +1,82 @@
+{
+  "info": {
+    "id": "server.kavita.tamdok",
+    "name": "Kavita",
+    "version": 1,
+    "url": "https://www.kavitareader.com",
+    "contentRating": 0,
+    "languages": [
+      "multi"
+    ],
+    "minAppVersion": "0.1.0"
+  },
+  "listings": [
+    {
+      "id": "all",
+      "name": "All Series",
+      "kind": "grid"
+    },
+    {
+      "id": "recent",
+      "name": "Recently Added",
+      "kind": "grid"
+    },
+    {
+      "id": "ondeck",
+      "name": "On Deck",
+      "kind": "grid"
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "title": "URL",
+      "items": [
+        {
+          "type": "text",
+          "id": "serverUrl",
+          "title": "Server URL",
+          "default": "http://localhost:5000"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "AUTH",
+      "items": [
+        {
+          "type": "text",
+          "id": "apiKey",
+          "title": "API key",
+          "default": "",
+          "secure": true
+        },
+        {
+          "type": "text",
+          "id": "username",
+          "title": "Username (if no API key)",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "password",
+          "title": "Password",
+          "default": "",
+          "secure": true
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "OTHER",
+      "items": [
+        {
+          "type": "link",
+          "id": "docs",
+          "title": "Kavita documentation",
+          "url": "https://wiki.kavitareader.com"
+        }
+      ]
+    }
+  ]
+}

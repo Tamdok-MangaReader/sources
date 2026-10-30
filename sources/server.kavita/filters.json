@@ -1,0 +1,37 @@
+[
+  {
+    "type": "sort",
+    "id": "sort",
+    "title": "Sort",
+    "options": [
+      "Name",
+      "Date created",
+      "Last chapter added",
+      "Release year",
+      "Average rating"
+    ],
+    "default": {
+      "index": 0,
+      "ascending": true
+    }
+  },
+  {
+    "type": "multi-select",
+    "id": "status",
+    "title": "Publication status",
+    "options": [
+      "Ongoing",
+      "Hiatus",
+      "Completed",
+      "Cancelled",
+      "Ended"
+    ],
+    "ids": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  }
+]

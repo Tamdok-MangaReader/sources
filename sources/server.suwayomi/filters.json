@@ -1,0 +1,17 @@
+[
+  {
+    "type": "sort",
+    "id": "sort",
+    "title": "Sort",
+    "options": [
+      "Title",
+      "Date added to library",
+      "Last updated",
+      "ID"
+    ],
+    "default": {
+      "index": 0,
+      "ascending": true
+    }
+  }
+]

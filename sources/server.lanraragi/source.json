@@ -1,0 +1,74 @@
+{
+  "info": {
+    "id": "server.lanraragi.tamdok",
+    "name": "LANraragi",
+    "version": 1,
+    "url": "https://github.com/Difegue/LANraragi",
+    "contentRating": 0,
+    "languages": [
+      "multi"
+    ],
+    "minAppVersion": "0.1.0"
+  },
+  "listings": [
+    {
+      "id": "all",
+      "name": "All Archives",
+      "kind": "grid"
+    },
+    {
+      "id": "recent",
+      "name": "Recently Added",
+      "kind": "grid"
+    },
+    {
+      "id": "new",
+      "name": "New Archives",
+      "kind": "grid"
+    },
+    {
+      "id": "random",
+      "name": "Random",
+      "kind": "grid"
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "title": "URL",
+      "items": [
+        {
+          "type": "text",
+          "id": "serverUrl",
+          "title": "Server URL",
+          "default": "http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "AUTH",
+      "items": [
+        {
+          "type": "text",
+          "id": "apiKey",
+          "title": "API key",
+          "default": "",
+          "secure": true
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "OTHER",
+      "items": [
+        {
+          "type": "link",
+          "id": "docs",
+          "title": "LANraragi documentation",
+          "url": "https://sugoi.gitbook.io/lanraragi"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "type": "sort",
+    "id": "sort",
+    "title": "Sort",
+    "options": [
+      "Date added",
+      "Title",
+      "Last read",
+      "Artist"
+    ],
+    "default": {
+      "index": 0,
+      "ascending": false
+    }
+  },
+  {
+    "type": "check",
+    "id": "newonly",
+    "title": "New archives only",
+    "default": false
+  },
+  {
+    "type": "check",
+    "id": "untaggedonly",
+    "title": "Untagged only",
+    "default": false
+  }
+]
