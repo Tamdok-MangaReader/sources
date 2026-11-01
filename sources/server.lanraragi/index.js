@@ -89,6 +89,10 @@ function toEntry(ctx, archive) {
   };
 }
 
+/**
+ * @param {import("../../types/tamdok").TamdokSourceContext} ctx
+ * @param {{ query?: string, page?: number, sort?: string, ascending?: boolean, category?: string, newOnly?: boolean, untaggedOnly?: boolean }} params
+ */
 async function search(ctx, { query, page, sort, ascending, category, newOnly, untaggedOnly }) {
   const pageNumber = Math.max(1, page ?? 1);
   const start = (pageNumber - 1) * state.pageSize;
@@ -128,6 +132,7 @@ function resolvePagePath(ctx, path) {
   return `${serverUrl(ctx)}${clean}`;
 }
 
+/** @type {import("../../types/tamdok").TamdokSourceModule} */
 const source = {
   async getListings(ctx) {
     const listings = [
@@ -143,6 +148,7 @@ const source = {
   },
 
   async getFilters(ctx) {
+    /** @type {import("../../types/tamdok").FilterDefinition[]} */
     const filters = [
       {
         type: "sort",

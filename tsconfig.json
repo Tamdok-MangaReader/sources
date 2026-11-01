@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": ["es2020", "dom"],
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["sources/*/index.js", "types/*.d.ts"],
+  "exclude": ["node_modules"]
+}

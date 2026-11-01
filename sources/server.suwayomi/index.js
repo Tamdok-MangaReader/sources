@@ -123,6 +123,10 @@ function positive(value) {
   return Number.isFinite(number) && number >= 0 ? number : undefined;
 }
 
+/**
+ * @param {import("../../types/tamdok").TamdokSourceContext} ctx
+ * @param {{ query?: string, page?: number, sort?: string, ascending?: boolean }} params
+ */
 async function listLibrary(ctx, { query, page, sort, ascending }) {
   const offset = (Math.max(1, page) - 1) * PAGE_SIZE;
   const filter = { inLibrary: { equalTo: true } };
@@ -213,6 +217,7 @@ async function loadChapters(ctx, mangaId) {
   return nodes.map(toChapter);
 }
 
+/** @type {import("../../types/tamdok").TamdokSourceModule} */
 const source = {
   async getListings(ctx) {
     const listings = [
@@ -228,6 +233,7 @@ const source = {
   },
 
   async getFilters(ctx) {
+    /** @type {import("../../types/tamdok").FilterDefinition[]} */
     const filters = [
       {
         type: "sort",

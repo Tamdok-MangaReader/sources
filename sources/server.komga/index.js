@@ -345,6 +345,7 @@ async function fetchSeriesByEndpoint(ctx, endpoint, page) {
   };
 }
 
+/** @type {import("../../types/tamdok").TamdokSourceModule} */
 const source = {
   async getListings(ctx) {
     const listings = [

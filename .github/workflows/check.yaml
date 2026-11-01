@@ -1,0 +1,33 @@
+name: Check sources
+
+# Runs on every pull request and push: validates manifests and scripts, then type-checks the sources.
+on:
+  pull_request:
+  push:
+    branches-ignore: [gh-pages]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # needed to compare versions with the base branch
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - name: Validate manifests and scripts
+        run: node scripts/check.mjs ${{ github.event_name == 'pull_request' && format('--base origin/{0}', github.base_ref) || '' }}
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Build packages
+        run: npm run build

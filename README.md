@@ -36,3 +36,20 @@ tamdok://settings/sources?registry=https%3A%2F%2Ftamdok-mangareader.github.io%2F
 
 
 Or import a `.tamdok` file from Settings → Sources.
+
+## Types
+
+`types/tamdok.d.ts` describes the source API (`TamdokSourceModule`, `ctx`, `Manga`, `Chapter`, filters, home layout). Every source annotates its `source` object with it:
+
+```javascript
+/** @type {import("../../types/tamdok").TamdokSourceModule} */
+const source = { /* ... */ };
+```
+
+This gives editor autocomplete and lets you check all sources at once:
+
+```bash
+npm run typecheck
+```
+
+`npm run check` validates manifests and scripts (required `info` fields, unique ids, valid `filters.json`, JavaScript syntax) and `npm run verify` runs both. They also run on GitHub Actions for every pull request and before each deploy. The annotation is a comment and the types are not included in `.tamdok` packages. The check is lenient (`strict: false`). Details: [API reference](https://github.com/Tamdok-MangaReader/sources-community/wiki/API-reference#types).
